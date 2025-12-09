@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 9 – Advanced DOM</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    li { margin: 5px 0; }
+    button { margin-left: 5px; }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(8, 50px);
+      width: 400px;
+      margin-top: 20px;
+    }
+    .cell {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Task 22: Advanced To-Do List</h2>
+
+<input type="text" id="taskInput">
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+<hr>
+
+<h2>Task 23: Chessboard</h2>
+<div id="board"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
