@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined Layout</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .page { display: flex; min-height: 100vh; }
+
+    /* 6) Sidebar */
+    .sidebar {
+      width: 200px;
+      background: #333;
+      color: #fff;
+      padding: 15px;
+    }
+    .sidebar h2 { margin-top: 0; }
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+    }
+
+    .main { flex: 1; padding: 20px; }
+
+    /* 7) Product card */
+    .product-card {
+      max-width: 280px;
+      margin: 0 auto 20px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      text-align: center;
+      background: #fff;
+    }
+    .product-card img { width: 100%; height: auto; }
+    .product-card button {
+      margin-top: 8px;
+      padding: 6px 12px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* 8) Blog layout (3-column flex) */
+    .blog {
+      margin-top: 20px;
+    }
+    .blog h2 { margin-bottom: 10px; }
+    .blog-row {
+      display: flex;
+      gap: 10px;
+    }
+    .post {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #fafafa;
+    }
+
+    /* Mobile: sidebar on top, blog posts stacked */
+    @media (max-width: 700px) {
+      .page { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .blog-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Shop</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <h1>My UI Demo</h1>
+
+    <!-- Product Card -->
+    <div class="product-card">
+      <img src="product.jpg" alt="Product">
+      <h3>Smart Watch</h3>
+      <p>Track your fitness and time easily.</p>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Blog Layout -->
+    <section class="blog">
+      <h2>Latest Blog Posts</h2>
+      <div class="blog-row">
+        <article class="post">
+          <h3>Post 1</h3>
+          <p>Short description of blog post 1.</p>
+        </article>
+        <article class="post">
+          <h3>Post 2</h3>
+          <p>Short description of blog post 2.</p>
+        </article>
+        <article class="post">
+          <h3>Post 3</h3>
+          <p>Short description of blog post 3.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
